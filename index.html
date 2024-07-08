@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APT Portfolio - Bootstrap</title>
+  <link rel="icon" href="images/icons/profile.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/light-mode.css" id="mode-style">
+</head>
+<body>
+  <!-- Header -->
+  <div id="header"></div>
+  <!-- Navigation -->
+  <div id="nav"></div>
+  <main>
+    <div class="container">
+      <!-- Page-specific content goes here -->
+      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <!-- Linked In -->
+          <div class="carousel-item active">
+            <img src="images/banners/dronegolf.jpg" width="2048" height="683">
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <img src="images/icons/social/linkedin-logo1.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                <h1 style="color: white;">Linked-In</h1>
+                <p style="color: white;" class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+                <p><a class="btn btn-lg btn-primary btn-lg" href="https://www.linkedin.com/in/adam-thompson-a547468/">Linked-In Profile</a></p>
+              </div>
+            </div>
+          </div>
+          <!-- Additional carousel items... -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Additional content... -->
+    </div>
+  </main>
+  <!-- Footer -->
+  <div id="footer"></div>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById("header").innerHTML = fetch('templates/header.html').then(res => res.text()).then(data => data);
+    document.getElementById("nav").innerHTML = fetch('templates/nav.html').then(res => res.text()).then(data => data);
+    document.getElementById("footer").innerHTML = fetch('templates/footer.html').then(res => res.text()).then(data => data);
+  </script>
+  <script src="stylescripts2/JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>
