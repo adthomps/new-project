@@ -15,7 +15,10 @@
   <!-- CSS -->
   <link href="stylescripts2/CSS/common.css" rel="stylesheet">
   <link href="stylescripts2/CSS/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- Custom styles for this template -->
+  <link href="stylescripts2/CSS/merged.css" rel="stylesheet">
 
   <!-- CSS - Custom Color Selector -->
   <style>
@@ -45,6 +48,7 @@
       display: block !important;
     }
   </style>
+
 </head>
 
 <body>
@@ -68,7 +72,8 @@
 
   <!--Theme Code Start-->
   <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+      data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
       <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
         <use href="#circle-half"></use>
       </svg>
@@ -76,7 +81,8 @@
     </button>
     <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+          aria-pressed="false">
           <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
             <use href="#sun-fill"></use>
           </svg>
@@ -87,7 +93,8 @@
         </button>
       </li>
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+          aria-pressed="false">
           <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
             <use href="#moon-stars-fill"></use>
           </svg>
@@ -98,7 +105,8 @@
         </button>
       </li>
       <li>
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+          aria-pressed="true">
           <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
             <use href="#circle-half"></use>
           </svg>
@@ -118,164 +126,29 @@
   <main>
     <div class="container">
 
-      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <div class="px-4 py-0 my-5 text-center">
+        <h1 class="display-8 fw-bold">Example Title Page Widget Examples</h1>
+        <div class="d-flex justify-content-center">
+          <p class="lead mb-4">Example Subtitle or Lead.</p>
         </div>
-        <div class="carousel-inner">
-
-          <!-- Linked In -->
-          <div class="carousel-item active">
-            <img src="images/banners/dronegolf.jpg" width="2048" height="683">
-            <div class="container">
-              <div class="carousel-caption text-start">
-                <img src="images/icons/social/linkedin-logo1.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                <h1 style="color: white;">Linked-In</h1>
-                <p style="color: white;" class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-                <p><a class="btn btn-lg btn-primary btn-lg" href="https://www.linkedin.com/in/adam-thompson-a547468/">Linked-In Profile</a></p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Flickr -->
-          <div class="carousel-item">
-            <img src="images/banners/island.jpg" width="2048" height="683">
-            <div class="container">
-              <div class="carousel-caption">
-                <img src="images/icons/social/flickr-logo2.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                <h1 style="color: white;">Flickr</h1>
-                <p style="color: white;" class="opacity-75">Photo Gallery on Flickr - DSLR, iPhone & Drone Pictures</p>
-                <p><a class="btn btn-lg btn-primary btn-lg" href="https://www.flickr.com/photos/adam-p-thompson/albums">View Flickr Gallery</a></p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Behance -->
-          <div class="carousel-item">
-            <img src="images/banners/bridge.jpg" width="2048" height="683">
-            <div class="container">
-              <div class="carousel-caption">
-                <img src="images/icons/social/behancelogo2.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                <h1 style="color: white;">Behance</h1>
-                <p style="color: white;" class="opacity-75">Photo Gallery on Behance</p>
-                <p><a class="btn btn-lg btn-primary btn-lg" href="https://www.flickr.com/photos/adam-p-thompson/albums">View Behance Gallery</a></p>
-              </div>
-            </div>
-          </div>
-
-          <!-- YouTube -->
-          <div class="carousel-item">
-            <img src="images/banners/dronebanner.jpg" width="2048" height="683">
-            <div class="container">
-              <div class="carousel-caption text-end">
-                <img src="images/icons/social/youtubelogo1.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                <h1 style="color: white;">YouTube</h1>
-                <p style="color: white;" class="opacity-75">Published video from my camera and drone.</p>
-                <p><a class="btn btn-lg btn-primary" href="https://www.youtube.com/channel/UChghyQZmnM2UYBYyJ2yhyVg">Browse Videos</a></p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Buttons for Carousel-->
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-
+        <img class="d-block mx-auto mb-4" src="images/icons/heartbeat3.png" width="300" height="69" />Example Image
       </div>
 
-
-      <!-- Marketing messaging and featurettes
-    ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-
-      <div class="container marketing">
-
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-
-          <div class="col-lg-4">
-            <img id="anetimage" src="images/icons/anet/anet-logo2.png" width="300" height="69" alt="Image" />
-            <h2 class="fw-normal"></h2>
-            <br />
-            <p>These tests cover various API interations and related services for Authorize.net.</p>
-            <p><a class="btn btn-secondary" href="anet.html">View Tests &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-
-          <div class="col-lg-4">
-            <img id="cybsimage" src="images/icons/cybs/cybersource-logo6.png" width="300" height="69" alt="Image" />
-            <h2 class="fw-normal"></h2>
-            <br />
-            <p>These tests cover various API interations and related services for Cybersource.</p>
-            <p><a class="btn btn-secondary" href="cybs.html">View Tests &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-
-          <div class="col-lg-4">
-            <img src="images/icons/heartbeat3.png" width="300" height="69" />
-            <h2 class="fw-normal"></h2>
-            <br />
-            <p>These tests cover various Status Page widget and integration.</p>
-            <p><a class="btn btn-secondary" href="statuspage.html">View Tests &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-
-        </div><!-- /.row -->
-
-
-        <!-- START THE FEATURETTES -->
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">Water Drop Gallery<span class="text-body-secondary"></span>
-            </h2>
-            <p class="lead">Drop Gallery</p>
-            <a href="gallery.html" class="btn btn-outline-secondary d-inline-flex align-items-center">View Drop Gallery</a>
-          </div>
-          <div class="col-md-5">
-            <img src="images/gallery/galleryprofile2.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" />
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading fw-normal lh-1">Drone and Hiking Maps & Photography<span class="text-body-secondary"></span></h2>
-            <p class="lead">Maps & Photography</p>
-            <a href="drone.html" class="btn btn-outline-secondary d-inline-flex align-items-center">View Drone & Hiking Maps &raquo;</a>
-            <a href="https://www.skypixel.com/users/sanchito84" class="btn btn-outline-secondary d-inline-flex align-items-center">View Drone Panorama Photography &raquo;</a>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img id="droneimage" src="images/icons/drone-logo2.png" alt="Image" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="350" height="350" />
-          </div>
-        </div>
-
+      <div class="container">
+        Example Body Content
       </div>
 
-      <br />
-      <!-- /END THE FEATURETTES -->
+    </div>
 
-      </div><!-- /.container -->
+    <!-- Placeholder for Footer -->
+    <footer></footer>
 
-      <!-- Placeholder for Footer -->
-      <footer></footer>
+  </main>
 
-    </main>
-
-    <!-- JS -->
-    <script src="js/color-modes3.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="loadHeaderFooter.js"></script>
+  <!-- JS -->
+  <script src="stylescripts2/JS/color-modes3.js"></script>
+  <script src="stylescripts2/JS/bootstrap.bundle.min.js"></script>
+  <script src="loadHeaderFooter.js"></script>
 
 </body>
 

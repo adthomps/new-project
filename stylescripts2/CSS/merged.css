@@ -1,0 +1,235 @@
+/* Custom Form Control */
+.form-control-dark {
+  border-color: var(--bs-gray);
+}
+
+.form-control-dark:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+
+/* Text Styles */
+.text-small {
+  font-size: 85%;
+}
+
+/* Dropdown Styles */
+.dropdown-toggle:not(:focus) {
+  outline: 0;
+}
+
+/* Carousel Styles */
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+.carousel-item {
+  height: 32rem;
+}
+
+/* Marketing Content Styles */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+/* Featurettes Styles */
+.featurette-divider {
+  margin: 5rem 0;
+}
+
+.featurette-heading {
+  letter-spacing: -.05rem;
+}
+
+/* Responsive Styles */
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+/* Additional Styles */
+.dropdown-item-danger {
+  color: var(--bs-red);
+}
+
+.dropdown-item-danger:hover,
+.dropdown-item-danger:focus {
+  color: #fff;
+  background-color: var(--bs-red);
+}
+
+.dropdown-item-danger.active {
+  background-color: var(--bs-red);
+}
+
+.btn-hover-light {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+}
+
+.btn-hover-light:hover,
+.btn-hover-light:focus {
+  color: var(--bs-link-hover-color);
+  background-color: var(--bs-tertiary-bg);
+}
+
+.cal-month,
+.cal-days,
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+}
+
+.cal-month-name {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  text-align: center;
+}
+
+.cal-weekday,
+.cal-btn {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  padding: 0;
+}
+
+.cal-btn:not([disabled]) {
+  font-weight: 500;
+  color: var(--bs-emphasis-color);
+}
+
+.cal-btn:hover,
+.cal-btn:focus {
+  background-color: var(--bs-secondary-bg);
+}
+
+.cal-btn[disabled] {
+  border: 0;
+  opacity: .5;
+}
+
+.w-220px {
+  width: 220px;
+}
+
+.w-280px {
+  width: 280px;
+}
+
+.w-340px {
+  width: 340px;
+}
+
+.opacity-10 {
+  opacity: .1;
+}
+
+/* CSS - Custom Color Selector */
+  /* Placeholder Image */
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  /* Example Divider */
+  .b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .15);
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  /* Vertical Divider */
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  /* Bootstrap Icons */
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  /* Navigation Scroller */
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Bootstrap Primary Button */
+  .btn-bd-primary {
+    --bd-violet-bg: #1739fc;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #0923b6;
+    --bs-btn-hover-border-color: #1739fc;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #1739fc;
+    --bs-btn-active-border-color: #0923b6;
+  }
+
+  /* Mode Toggle Dropdown */
+  .bd-mode-toggle {
+    z-index: 1500;
+  }
+
+  .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+  }
