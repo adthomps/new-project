@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cybersource Unified Checkout Test Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Cybersource Unified Checkout Test</h2>
+        <form id="paymentForm">
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" class="form-control" id="amount" placeholder="Enter amount">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="processPayment()">Pay Now</button>
+        </form>
+    </div>
+
+    <script src="https://testflex.cybersource.com/cybersource/assets/microform/0.11.0/flex-microform.min.js"></script>
+    <script type="text/javascript">
+        var flexResponse = null;
+
+        function processPayment() {
+            var amount = document.getElementById('amount').value;
+
+            // Example function to initiate payment
+            // Replace with actual keys and endpoints from your Cybersource account
+            var flex = new Flex({
+                // Key from Cybersource merchant account
+                key: '24889401-6084-4a4a-a6c1-977e87adedb6'
+            });
+
+            flex.createToken({
+                cardNumber: document.getElementById('cardNumber').value,
+                cardExpirationMonth: document.getElementById('cardExpiryMonth').value,
+                cardExpirationYear: document.getElementById('cardExpiryYear').value,
+                cardSecurityCode: document.getElementById('cardCvv').value
+            }, function (result) {
+                if (result.error) {
+                    console.error(result.error);
+                    // Handle error in payment processing
+                } else {
+                    flexResponse = result.token;
+                    // Send this token to your server to process payment
+                    console.log('Tokenization successful, token:', flexResponse);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
