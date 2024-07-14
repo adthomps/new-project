@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  loadHTML("../templates/header.html", "header");
-  loadHTML("../templates/footer.html", "footer");
+  loadHTML("../../templates/header.html", "header");
+  loadHTML("../../templates/footer.html", "footer");
 });
 
 function loadHTML(file, elementId) {
