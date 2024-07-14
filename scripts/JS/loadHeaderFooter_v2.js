@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function getRelativePath(filePath) {
   const currentPath = window.location.pathname;
-  const depth = currentPath.split("/").length - 1; // Adjust this based on your structure
+  const depth = currentPath.split("/").length - 2; // Adjust this based on your structure
   let relativePath = "";
   for (let i = 0; i < depth; i++) {
     relativePath += "../";
