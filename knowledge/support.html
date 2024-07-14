@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/icons/profile.jpg" type="image/x-icon">
+  <title>APT Portfolio - Bootstrap</title>
+  <link href="scripts/CSS/common.css" rel="stylesheet">
+  <link href="scripts/CSS/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="scripts/CSS/merged.css" rel="stylesheet">
+  <style>
+    .btn-bd-primary {
+      --bd-violet-bg: #1739fc;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #0923b6;
+      --bs-btn-hover-border-color: #1739fc;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #1739fc;
+      --bs-btn-active-border-color: #0923b6;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <div class="container">
+
+    <!-- Header File Load-->
+    <div class="container">
+      <div id="header"></div>
+    </div>
+
+      <div class="px-4 py-0 my-5 text-center">
+        <h1 class="display-8 fw-bold">Example Title Page Widget Examples</h1>
+        <div class="d-flex justify-content-center">
+          <p class="lead mb-4">Example Subtitle or Lead.</p>
+        </div>
+        <img class="d-block mx-auto mb-4" src="images/icons/heartbeat3.png" width="300" height="69"
+          alt="Heartbeat Icon" />Example Image
+      </div>
+      <div class="container">
+
+        <div class="section-title text-center">
+          <h1>Get in Touch</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis dignissim. Aenean vitae metus in augue pretium ultrices.</p>
+        </div>					
+        <div class="row">
+          <div class="col-lg-7">	
+            <div class="contact">
+              <form class="form" name="enq" method="post" action="contact.php" onsubmit="return validation();">
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Name" required="required">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input type="email" name="email" class="form-control" placeholder="Email" required="required">
+                  </div>
+                  <div class="form-group col-md-12">
+                    <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
+                  </div>
+                  <div class="form-group col-md-12">
+                    <textarea rows="6" name="message" class="form-control" placeholder="Your Message" required="required"></textarea>
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <button type="submit" value="Send message" name="submit" id="submitButton" class="btn btn-contact-bg" title="Submit Your Message!">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div><!--- END COL --> 
+          <div class="col-lg-5">
+            <div class="single_address">
+              <i class="fa fa-map-marker"></i>
+              <h4>Our Address</h4>
+              <p>3481 Melrose Place, Beverly Hills</p>
+            </div>
+            <div class="single_address">
+              <i class="fa fa-envelope"></i>
+              <h4>Send your message</h4>
+              <p>Info@example.com</p>
+            </div>
+            <div class="single_address">
+              <i class="fa fa-phone"></i>
+              <h4>Call us on</h4>
+              <p>(+1) 517 397 7100</p>
+            </div>
+            <div class="single_address">
+              <i class="fa fa-clock-o"></i>
+              <h4>Work Time</h4>
+              <p>Mon - Fri: 08.00 - 16.00. <br>Sat: 10.00 - 14.00</p>
+            </div>					
+          </div><!--- END COL --> 
+        </div><!--- END ROW -->
+
+      </div>
+    </div>
+
+    <!-- Footer File Load-->
+    <div class="container">
+      <div id="footer"></div>
+    </div>
+
+  </main>
+
+  <script src="scripts/JS/color-modes3.js" defer></script>
+  <script src="scripts/JS/bootstrap.bundle.min.js" defer></script>
+  <script src="scripts/JS/loadHeaderFooter.js" defer></script>
+  <script src="scripts/JS/basePath.js" defer></script>
+
+</body>
+
+</html>
