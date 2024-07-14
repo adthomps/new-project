@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SOAP Request Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>SOAP Request Form</h1>
+    <form id="soapForm">
+        <label for="merchantName">Merchant Name:</label>
+        <input type="text" id="merchantName" name="merchantName" value="4Nw8cM244"><br><br>
+
+        <label for="transactionKey">Transaction Key:</label>
+        <input type="text" id="transactionKey" name="transactionKey" value="5AWv8X56Et9r6AtC"><br><br>
+
+        <label for="customerProfileId">Customer Profile ID:</label>
+        <input type="text" id="customerProfileId" name="customerProfileId" value="1506880082"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Response:</h2>
+    <div id="response"></div>
+
+    <script type="text/javascript">
+        document.getElementById('soapForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var merchantName = document.getElementById('merchantName').value;
+            var transactionKey = document.getElementById('transactionKey').value;
+            var customerProfileId = document.getElementById('customerProfileId').value;
+
+            var soapRequest = 
+                '<?xml version="1.0" encoding="utf-8"?>' +
+                '<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ' +
+                'xmlns:xsd="http://www.w3.org/2001/XMLSchema" ' +
+                'xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">' +
+                '<soap12:Body>' +
+                '<GetHostedProfilePage xmlns="https://api.authorize.net/soap/v1/">' +
+                '<merchantAuthentication>' +
+                '<name>' + merchantName + '</name>' +
+                '<transactionKey>' + transactionKey + '</transactionKey>' +
+                '</merchantAuthentication>' +
+                '<customerProfileId>' + customerProfileId + '</customerProfileId>' +
+                '<hostedProfileSettings>' +
+                '<setting>' +
+                '<settingName>hostedProfileReturnUrl</settingName>' +
+                '<settingValue>https://adthomps.github.io/anet/accept.html</settingValue>' +
+                '</setting>' +
+                '<setting>' +
+                '<settingName>hostedProfileReturnUrlText</settingName>' +
+                '<settingValue>Return to test page.</settingValue>' +
+                '</setting>' +
+                '</hostedProfileSettings>' +
+                '</GetHostedProfilePage>' +
+                '</soap12:Body>' +
+                '</soap12:Envelope>';
+
+            $.ajax({
+                type: "POST",
+                url: "https://apitest.authorize.net/soap/v1/Service.asmx",
+                contentType: "text/xml; charset=utf-8",
+                dataType: "xml",
+                data: soapRequest,
+                success: function(response) {
+                    var token = $(response).find("token").text();
+                    $('#response').text("Token: " + token);
+                },
+                error: function(response) {
+                    $('#response').text("Error: " + response.statusText);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
